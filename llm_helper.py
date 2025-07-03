@@ -8,9 +8,9 @@ import re
 
 load_dotenv()  # Load environment variables from .env file
 
-def extract_financial_data(text, llm_name):
+def extract_financial_data(text, llm_name="groq"):
+    print("Extracting financial data using " + llm_name + " LLM")
     prompt = get_prompt_financial() + text
-
     # check if the llm is groq or openai
     if llm_name == "openai":
         client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
