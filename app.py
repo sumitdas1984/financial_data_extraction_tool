@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import llm_helper
 
-col1, col2 = st.columns([3,2])
+col1, col2 = st.columns([4,2])
 
 financial_data_df = pd.DataFrame({
         "Measure": ["Company Name", "Stock Symbol", "Revenue", "Net Income", "EPS"],
