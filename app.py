@@ -12,7 +12,13 @@ financial_data_df = pd.DataFrame({
 with col1:
     st.title("Data Extraction Tool")
     news_article = st.text_area("Paste your financial news article here", height=300)
+
+    # Create a dropdown for selecting the LLM
+    llm_options = ["Groq", "OpenAI"]
+    selected_llm = st.selectbox("Select LLM:", llm_options, index=0)  # Groq is default
+
     if st.button("Extract"):
+        # st.write(f"You selected: {selected_llm}")
         financial_data_df = llm_helper.extract_financial_data(news_article)
 
 with col2:
