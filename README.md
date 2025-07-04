@@ -7,9 +7,24 @@ This tool is a streamlit based app that uses openai api to extract key financial
 
 ### Installation
 
-```doctest
+#### 1. Clone the repository
+```bash
+https://github.com/sumitdas1984/financial_data_extraction_tool.git
+```
+
+#### 2. Create a Python environment
+Python 3.8 or higher using `pyenv`. 
+
+``` bash
+cd gen-ai-experiments
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+#### 3. Install the required dependencies
+```bash
 pip install -r requirements.txt
 ```
-You need to create an account on openai and groq website. 
-You will get inital 5$ free credits which is more than enough for this project.
-Once you get an api key from your openai and groq account create a .env file at the project root and add the keys to .env
+
+#### 4. Set up the keys in a .env file
+First, create a `.env` file in the root directory of the project. Inside the file, add your OpenAI and Groq API key:
