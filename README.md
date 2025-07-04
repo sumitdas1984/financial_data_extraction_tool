@@ -33,7 +33,7 @@ pip install -r requirements.txt
 ## How to run the streamlit app
 In commandline run
 ```bash
-streamlit run main.py
+streamlit run app.py
 ```
 
 ## Dockerization of the App
