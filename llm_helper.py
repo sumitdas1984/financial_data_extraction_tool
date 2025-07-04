@@ -1,12 +1,12 @@
 import os
+# from dotenv import load_dotenv
 from openai import OpenAI
 from groq import Groq
-from dotenv import load_dotenv
 import json
 import pandas as pd
 import re
 
-load_dotenv()  # Load environment variables from .env file
+# load_dotenv()  # Load environment variables from .env file
 
 def extract_financial_data(text, llm_name="groq"):
     print("Extracting financial data using " + llm_name + " LLM")

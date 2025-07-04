@@ -1,6 +1,9 @@
+from dotenv import load_dotenv
 import streamlit as st
 import pandas as pd
 import llm_helper
+
+load_dotenv()  # Load environment variables from .env file
 
 col1, col2 = st.columns([4,2])
 

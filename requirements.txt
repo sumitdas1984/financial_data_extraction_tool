@@ -3,3 +3,4 @@ openai
 groq
 streamlit
 pandas
+python-dotenv
