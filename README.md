@@ -35,3 +35,51 @@ In commandline run
 ```bash
 streamlit run main.py
 ```
+
+## Dockerization of the App
+
+This application is containerized using Docker to ensure consistency across different environments and ease of deployment.
+
+### Dockerfile Explanation
+
+- **Base Image**: We use the official Python image to ensure compatibility with our application.
+- **Working Directory**: The working directory is set to `/app` where the application code resides.
+- **Dependencies**: The application dependencies are installed from `requirements.txt`.
+- **Copying Files**: The application code and `.env` file are copied into the container.
+- **Exposing Ports**: Port 8501 is exposed for accessing the Streamlit application.
+- **Running the Application**: The application is started using Streamlit.
+
+## Local Docker Deployment
+
+### Prerequisites
+
+- Docker must be installed on your local machine.
+
+### Building the Docker Image
+
+Run the following command to build the Docker image:
+
+```bash
+docker build -t financial_data_extraction_tool .
+```
+
+### Running the Docker Container
+
+To run the Docker container, use:
+
+```bash
+docker run -p 8501:8501 financial_data_extraction_tool
+```
+
+### Accessing the Application
+
+Open your web browser and go to `http://localhost:8501` to access the application.
+
+### Environment Variables
+
+Manage your environment variables using the `.env` file and the `python-dotenv` package.
+
+```javascript
+
+This documentation will help users understand how to use Docker with your application effectively. If you would like to add or modify any specific sections, please let me know!
+```
